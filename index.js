@@ -51,6 +51,12 @@
         if (isSignedIn) {
           authorizeButton.style.display = 'none';
           signoutButton.style.display = 'block';
+          const compose_mail=document.createElement('div')
+          compose_email.innerHTML=`<a href="compose.html"
+          data-toggle="modal"
+          id="compose-button"
+          class="btn btn-primary pull-right hidden" style="display:none;">Compose</a>`
+          pre.appendChild(compose_email)
           listLabels();
         } else {
           authorizeButton.style.display = 'block';
