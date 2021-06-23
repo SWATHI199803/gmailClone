@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Gmail API Quickstart</title>
+    <meta charset="utf-8" />
+    <style>
+        #authorize_button{
+  font-size:18px;
+  background:linear-gradient(54deg,#C0C0C0,#708090);
+  font-weight:bold;
+  color:#008080;
+  margin:0px 4px;
+  padding:5px 5px 5px 5px;
+}
+
+#signout_button{
+  font-size:18px;
+  background:linear-gradient(54deg,#C0C0C0,#708090);
+  font-weight:bold;
+  color:#008080;
+  margin:0px 4px;
+  padding:5px 5px 5px 5px;
+}
+
+#compose-button{
+  text-decoration:none;
+  font-size:20px;
+  font-weight:bold;
+  color:#4682B4;
+  background:#FFFAFA;
+  border:1px solid #FFFFE0;
+  padding: 5px 5px 5px 5px;
+}
+    </style>
+  </head>
+  <body>
+    <p>Gmail API Quickstart</p>
+
+    <!--Add buttons to initiate auth sequence and sign out-->
+    <button id="authorize_button" style="display: none;">Authorize</button>
+    <button id="signout_button" style="display: none;">Sign Out</button>
+    <a href="compose.html"
+   data-toggle="modal"
+   id="compose-button"
+   class="btn btn-primary pull-right hidden">Compose</a>
+
+
+    <pre id="content" style="white-space: pre-wrap;"></pre>
+
+    
+    <script src="index.js"></script>
+
+    <script async defer src="https://apis.google.com/js/api.js"
+      onload="this.onload=function(){};handleClientLoad()"
+      onreadystatechange="if (this.readyState === 'complete') this.onload()">
+    </script>
+  </body>
+</html>
